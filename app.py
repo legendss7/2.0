@@ -174,7 +174,7 @@ if uploaded_file:
 
         # KPIs
         st.subheader("📌 KPIs")
-        kpi_cols = st.columns(len(y_axis))
+        kpi_cols = st.columns(len(y_axis) if len(y_axis) > 0 else 1)  # Solucionar el error de columnas vacías
         for i, y in enumerate(y_axis):
             try:
                 col_data = pd.to_numeric(df[y], errors='coerce')
