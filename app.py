@@ -6,7 +6,6 @@ from plotly.subplots import make_subplots
 import io
 import json
 import os
-import datetime
 import pydeck as pdk
 
 # Configuración de la página
@@ -130,7 +129,7 @@ if uploaded_file:
 
         # Visualización de gráficos
         st.subheader("📈 Visualización de datos")
-        
+
         # Crear subgráficas si se usa doble eje
         fig = make_subplots(specs=[[{"secondary_y": bool(secondary_y)}]]) if secondary_y else go.Figure()
 
